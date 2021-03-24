@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" xmlns:local="clr-namespace:ChartSample"
+             x:Class="ChartSample.MainPage">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Text="Export Chart as Image" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#d113c1" Clicked="Button_Clicked" TextColor="White" />
+        <Label x:Name="exportLabel" FontAttributes="Bold"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,40,0,0"/>
+        <Image x:Name="image" Margin="0,40,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>
