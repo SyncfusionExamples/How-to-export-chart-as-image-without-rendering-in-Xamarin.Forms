@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIKit;
+[assembly: Xamarin.Forms.Dependency(typeof(ChartSample.iOS.ChartDependency))]
 
 namespace ChartSample.iOS
 {
@@ -19,7 +20,8 @@ namespace ChartSample.iOS
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string filepath = Path.Combine(path, filename);
             FileStream outputFileStream = File.Open(filepath, FileMode.Create);
-            MemoryStream fileStream = (MemoryStream)chart;
+            MemoryStream fileStream = new MemoryStream();
+            chart.CopyTo(fileStream);
             fileStream.Position = 0;
             fileStream.CopyTo(outputFileStream);
             outputFileStream.Close();

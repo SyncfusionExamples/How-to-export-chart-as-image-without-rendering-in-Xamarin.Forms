@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ChartDependency.cs" />
@@ -129,18 +130,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <BundleResource Include="Millet.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Ragi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Rice.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Wheat.jpg" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChartSample\ChartSample.csproj">
       <Project>{a841b118-8fe3-4fa2-bddf-10d6522fb8e4}</Project>
